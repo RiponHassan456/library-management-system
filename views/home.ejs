@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> EWU Library</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a href="#" class="Logo">
+      <img src="logo1.png" alt="Logo" style="height: 70px;">
+    </a>
+    
+  <ul>
+   
+    <li class="dropdown">
+      <a href="#">Home</a>
+
+    </li>
+
+    <li class="dropdown">
+      <a href="#">ABOUT</a>
+      <ul class="dropdown-menu">
+        <li><a href="/milestore">Milestones</a></li>
+        <li><a href="/libraryUserPolicy">library User Policy</a></li>
+        <li><a href="/EventCalender">Event Calender</a></li>
+        <li><a href="/OpenAccessWeek">Open Access Week</a></li>
+        
+      
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">SERVICES</a>
+      <ul class="dropdown-menu">
+        <li><a href="/LibraryMembershipActivation">Library Membership Activation</a></li>
+        <li><a href="/BorrowingPrivilege">Borrowing Privilege</a></li>
+        <li><a href="/StudyPods">Study Pods</a></li>
+        <li><a href="/Kanopy">Event Calender</a></li>
+        
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">RESOURCES</a>
+      <ul class="dropdown-menu">
+        <li><a href="/Accesstoebooks">Access to ebooks</a></li>
+        <li><a href="/DatabaseA-Z">Database A-Z</a></li>
+        <li><a href="/OpenAccesseBooks">Open Access eBooks</a></li>
+        <li><a href="/InstitutionalRepository">Institutional Repository</a></li>
+        <li><a href="/AccesstoKanopyr">Access to Kanopyr</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#">SUBJECT</a>
+      <ul class="dropdown-menu">
+        <li><a href="/Architecture">Architecture</a></li>
+        <li><a href="/ComputerSceince">Computer Sceince</a></li>
+        <li><a href="/Business">Business</a></li>
+        <li><a href="/ENH">ENH</a></li>
+     
+        
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="/DOWNLOADS">DOWNLOADS</a>
+   
+    </li>
+    <li class="dropdown">
+      <a href="/CONTACTS">CONTACTS</a>
+    </li>
+  </ul>
+
+  
+</header>
+<body class="relative font-[Poppins] bg-white">
+
+  <!-- Banner Section -->
+  <div class="relative h-[700px] w-full bg-gray-100">
+
+    <!-- Background Image -->
+    <img src="ewu..jpg" alt="Banner Image" class="w-full h-full object-cover">
+
+
+    <!-- Centered Search Container -->
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] md:w-[60%] lg:w-[50%] bg-white/80 backdrop-blur-md rounded-lg p-6 shadow-lg">
+
+      <!-- Tabs -->
+      <div class="flex border-b border-gray-300 text-sm mb-4">
+        <button id="tab-library" class="tab-btn font-semibold px-4 py-2 border-r border-gray-300 w-full text-center text-blue-700 bg-blue-100" data-target="library.html">
+          <i class="fas fa-book mr-1"></i>Library
+        </button>
+        <button id="tab-scholar" class="tab-btn font-semibold px-4 py-2 border-r border-gray-300 w-full text-center text-blue-700 hover:bg-blue-100 transition-colors" data-target="scholar.html">
+          <i class="fas fa-graduation-cap mr-1"></i>Scholar
+        </button>
+        <button id="tab-eric" class="tab-btn font-semibold px-4 py-2 w-full text-center text-blue-700 hover:bg-blue-100 transition-colors" data-target="eric.html">
+          <i class="fas fa-database mr-1"></i>ERIC
+        </button>
+      </div>
+
+      <!-- Search Bar -->
+        <form id="search-form" action="/searchResults" method="post" class="flex flex-col items-center gap-4">
+    <div class="w-full relative">
+      <input 
+        id="search-input"
+        type="text" 
+        name="title" 
+        placeholder="Search books, titles, authors..."
+        class="w-full px-4 py-3 text-gray-800 placeholder-gray-500 text-sm font-normal outline-none rounded-lg border border-gray-300"
+        required
+      />
+      <button type="submit"
+        class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#1e90ff] text-white font-semibold px-4 py-2 rounded-lg hover:bg-[#0056b3] transition duration-200 text-sm">
+        <i class="fas fa-search mr-1"></i> Search
+      </button>
+    </div>
+  </form>
+</div>
+
+</div>
+
+</body>
+ <!-- Main Using the Library Page -->
+<body class="bg-white text-gray-900 font-sans min-h-screen flex flex-col">
+  <div id="mainPage" class="page active flex-grow max-w-6xl mx-auto px-8 py-16 text-center">
+    <h2 class="text-4xl font-extrabold text-[#0c3b5d] mb-6">Using the Library</h2>
+    <p class="text-lg text-gray-700 mb-16">
+      Use our tools and services to improve your library experience and save time
+    </p>
+    <div class="flex flex-col md:flex-row justify-center items-start md:items-center gap-16 border-t border-b border-gray-300 py-12">
+      <div class="flex-1 flex flex-col items-center text-center px-8 md:border-r border-gray-300">
+        <i class="fas fa-book-reader text-6xl mb-6"></i>
+        <h3 class="font-bold text-2xl mb-3">Borrow, Renew &amp; Return Library Items</h3>
+        <p class="text-lg text-gray-700 mb-3 max-w-xs">
+          Learn how to use your library materials
+        </p>
+        <p class="text-lg text-blue-700">
+          <a href="#" class="hover:underline">More details</a> | <a href="#" class="hover:underline">Tutorial</a>
+        </p>
+      </div>
+      <div class="flex-1 flex flex-col items-center text-center px-8 md:border-r border-gray-300">
+        <i class="fas fa-user-circle text-6xl mb-6"></i>
+        <h3 class="font-bold text-2xl mb-3">Student Account</h3>
+        <p class="text-lg text-gray-700 mb-3 max-w-xs">
+          Log in to your account for placing holds, checking and renewing loans.
+        </p>
+        <p class="text-lg text-blue-700 space-x-4">
+          <a href="/login" class="hover:underline underline">Login</a>
+          <a href="/register" class="hover:underline underline">Register</a>
+        </p>
+      </div>
+      <div class="flex-1 flex flex-col items-center text-center px-8">
+        <i class="fas fa-id-card text-6xl mb-6"></i>
+        <h3 class="font-bold text-2xl mb-3">Admin</h3>
+        <p class="text-lg text-gray-700 mb-3 max-w-xs">
+          view, add, update or delete the books,vew all the current loans.
+        </p>
+        <p class="text-lg text-blue-700 space-x-4">
+          <a href="/adminlogin" class="hover:underline underline">Login</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+ 
+<!-- Centered next setp -->
+
+      <section class="mt-17 max-w-5xl mx-auto text-center">
+        <h2 id="library-title" class="text-[#0a2e53] font-semibold text-lg mb-8">
+          East West University Library Collections
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-[#0a2e53] font-semibold text-sm">
+          <div>
+            <p id="printed-books-count" class="text-base mb-1">0</p>
+            <p class="border-b-2 border-yellow-400 inline-block pb-1">Printed Books</p>
+          </div>
+          <div>
+            <p id="theses-count" class="text-base mb-1">0</p>
+            <p class="border-b-2 border-yellow-400 inline-block pb-1">Theses &amp; Dissertations</p>
+          </div>
+          <div>
+            <p id="ebooks-count" class="text-base mb-1">0</p>
+            <p class="border-b-2 border-yellow-400 inline-block pb-1">Online E-books</p>
+          </div>
+          <div>
+            <p id="journals-count" class="text-base mb-1">0</p>
+            <p class="border-b-2 border-yellow-400 inline-block pb-1">Online Journals</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  
+    <button
+      aria-label="Scroll to top"
+      class="fixed bottom-6 right-6 bg-yellow-400 text-[#0a2e53] w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-yellow-300 focus:outline-none"
+    >
+      <i class="fas fa-chevron-up"></i>
+    </button>
+    
+<!-- Centered next setp --> 
+<body class="bg-white text-gray-900 font-sans min-h-screen flex flex-col">
+
+  <div class="max-w-7xl mx-auto px-4 py-10 flex flex-col md:flex-row md:space-x-10 flex-grow">
+    <!-- Left Section: Notice Board -->
+    <div class="md:w-1/3 space-y-6">
+      <h2 class="text-center font-semibold text-lg mb-4">Notice Board</h2>
+
+      <div class="space-y-2 bg-white rounded-lg shadow-lg p-4">
+        <button
+          class="w-full text-left bg-gray-100 border border-gray-300 rounded-md p-3 text-sm leading-tight hover:bg-gray-200 transition"
+          onclick="window.location.href='notice1.html'"
+          type="button"
+        >
+          Holiday Notice for Bangla New Year (April 14th, 2025)
+          <div class="flex items-center space-x-2 text-gray-500 mt-2 text-xs">
+            <i class="fas fa-user-friends text-xs"></i>
+            <span>SDC Library</span>
+            <i class="fas fa-calendar-alt text-xs ml-4"></i>
+            <span>April 13, 2025</span>
+          </div>
+        </button>
+
+        <button
+          class="w-full text-left bg-gray-100 border border-gray-300 rounded-md p-3 text-sm leading-tight hover:bg-gray-200 transition"
+          onclick="window.location.href='notice2.html'"
+          type="button"
+        >
+          Holiday Notice for Shab-e-Qadr & Eid-ul-Fitr (26th March 2025 - 3rd April 2025)
+          <div class="flex items-center space-x-2 text-gray-500 mt-2 text-xs">
+            <i class="fas fa-user-friends text-xs"></i>
+            <span>EWU Library</span>
+            <i class="fas fa-calendar-alt text-xs ml-4"></i>
+            <span>March 15, 2025</span>
+          </div>
+        </button>
+
+        <button
+          class="w-full text-left bg-gray-50 border border-gray-200 rounded-md p-3 text-sm leading-tight hover:bg-gray-100 transition"
+          onclick="window.location.href='notice3.html'"
+          type="button"
+        >
+          EWU Library Hours During the Holy Month of Ramadan
+          <div class="flex items-center space-x-2 text-gray-400 mt-2 text-xs">
+            <i class="fas fa-user-friends text-xs"></i>
+            <span>EWU Library</span>
+            <i class="fas fa-calendar-alt text-xs ml-4"></i>
+            <span>March 1, 2025</span>
+          </div>
+        </button>
+
+        <button
+          class="w-full text-left bg-gray-100 border border-gray-300 rounded-md p-3 text-sm leading-tight hover:bg-gray-200 transition"
+          onclick="window.location.href='notice4.html'"
+          type="button"
+        >
+          EWU Library Closure for Shaheed Dibosh and International Mother Language Day 2025
+          <div class="flex items-center space-x-2 text-gray-500 mt-2 text-xs">
+            <i class="fas fa-user-friends text-xs"></i>
+            <span>EWU Library</span>
+            <i class="fas fa-calendar-alt text-xs ml-4"></i>
+            <span>February 20, 2025</span>
+          </div>
+        </button>
+      </div>
+
+      <h3 class="text-center font-semibold text-sm mt-6 mb-2">Library Opening Hour</h3>
+
+      <div class="space-y-3 text-center text-xs text-gray-700">
+        <div class="border border-gray-300 rounded-md py-2 px-3">
+          Now EWU Library main sections (3rd, 4th floor &amp; study hall) are closed.
+        </div>
+        <div class="border border-gray-300 rounded-md py-2 px-3">
+          Now the Periodical Section and the Cyber &amp; Audio Visual Section are closed.
+        </div>
+        <div class="border border-gray-300 rounded-md py-2 px-3 text-left">
+          <div class="flex items-center space-x-2 mb-1">
+            <i class="fas fa-check-circle text-blue-500 text-xs"></i>
+            <span>Sunday-Thursday : 08.00 AM - 09.30 PM</span>
+          </div>
+          <div class="flex items-center space-x-2 mb-1">
+            <i class="fas fa-check-circle text-blue-500 text-xs"></i>
+            <span>Friday: 10.00 AM - 06.00 PM</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-check-circle text-blue-500 text-xs"></i>
+            <span>Saturday : 10.00 AM - 09.00 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Section: Full Width Calendar -->
+    <div class="md:w-2/3 mt-10 md:mt-0 flex justify-center">
+      <div class="bg-white rounded-lg shadow-2xl w-full border border-gray-100 p-8">
+        <div class="flex items-center justify-between mb-6">
+          <div class="flex items-center space-x-4 text-gray-600 text-2xl">
+            <button aria-label="Previous month" class="focus:outline-none" onclick="changeMonth(-1)">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button aria-label="Next month" class="focus:outline-none" onclick="changeMonth(1)">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="text-center">
+            <div class="font-semibold text-gray-900 text-3xl" id="calendarMonthYear">April 2025</div>
+          </div>
+          <div class="text-lg text-gray-400">Today</div>
+        </div>
+
+        <div class="flex items-center justify-between mb-6 text-lg text-gray-600 font-semibold">
+          <button class="flex items-center space-x-2 focus:outline-none" onclick="changeView('day')">
+            <i class="fas fa-bars"></i>
+            <span>Day</span>
+          </button>
+          <button class="flex items-center space-x-2 focus:outline-none" onclick="changeView('week')">
+            <i class="fas fa-th-large"></i>
+            <span>Week</span>
+          </button>
+          <button id="monthViewBtn" class="flex items-center space-x-2 bg-purple-700 text-white rounded px-6 py-3" onclick="changeView('month')">
+            <i class="fas fa-th"></i>
+            <span>Month</span>
+          </button>
+          <button class="flex items-center space-x-2 focus:outline-none" onclick="changeView('list')">
+            <i class="fas fa-list"></i>
+            <span>List</span>
+          </button>
+        </div>
+
+        <div id="calendarContainer" class="overflow-auto no-scrollbar">
+          <!-- Calendar content will be rendered here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button
+    aria-label="Scroll to top"
+    class="fixed bottom-5 right-5 bg-yellow-400 hover:bg-yellow-500 text-black rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+  >
+    <i class="fas fa-chevron-up text-lg"></i>
+  </button>
+ <!-- Centered next setp --> 
+
+</head>
+<body>
+  <main>
+    <div class="flex flex-col md:flex-row md:space-x-20">
+      <!-- Workshops & Events -->
+      <section>
+        <h2>Workshops &amp; Events</h2>
+        <ul id="workshops-list"></ul>
+        <nav id="workshops-pagination" aria-label="Pagination Workshops & Events"></nav>
+      </section>
+
+      <!-- News & Updates -->
+      <section>
+        <h2>News &amp; Updates</h2>
+        <ul id="news-list"></ul>
+        <nav id="news-pagination" aria-label="Pagination News & Updates"></nav>
+      </section>
+    </div>
+  </main>
+
+
+    <!-- Book items inserted by JS -->
+  
+    <body>
+      <section class="bg-gradient-to-b from-[#004a7c] to-[#003a5a] py-12">
+        <h2 class="text-white text-center font-semibold text-lg mb-10">New Arrivals</h2>
+        <div
+          aria-label="New Arrivals Book Carousel"
+          class="carousel max-w-7xl mx-auto flex space-x-8 overflow-x-auto px-6 scrollbar-hide"
+          tabindex="0"
+        >
+          <article
+            aria-label="Revolutions in the Atlantic world book"
+            class="flex-shrink-0 w-56 bg-white rounded-sm shadow-sm"
+            role="group"
+          >
+            <img
+              alt="Book cover of Revolutions in the Atlantic world, showing a historical painting with beige title area"
+              class="w-full rounded-t-sm"
+              height="336"
+              src="https://storage.googleapis.com/a1aa/image/b373d20f-32c3-4ce1-2453-5a84f49b1907.jpg"
+              width="224"
+            />
+            <div class="p-4 text-sm text-[#004a7c] leading-tight">
+              <p class="mb-2">Revolutions in the Atlantic world : a comparative history</p>
+              <p class="text-black font-semibold">Author: Wim Klooster</p>
+            </div>
+          </article>
+          <article
+            aria-label="The spy chronicles : RAW, ISI and the illusion of peace book"
+            class="flex-shrink-0 w-56 bg-white rounded-sm shadow-sm"
+            role="group"
+          >
+            <img
+              alt="Book cover of The spy chronicles : RAW, ISI and the illusion of peace, dark cover with large text"
+              class="w-full rounded-t-sm"
+              height="336"
+              src="https://storage.googleapis.com/a1aa/image/1ea7b51f-3b88-4bec-bec4-394597d97491.jpg"
+              width="224"
+            />
+            <div class="p-4 text-sm text-[#004a7c] leading-tight">
+              <p class="mb-2">The spy chronicles : RAW, ISI and the illusion of peace</p>
+              <p class="text-black font-semibold">
+                Author: A.S. Dulat, Asad Durrani and Aditya Sinha
+              </p>
+            </div>
+          </article>
+          <article
+            aria-label="Human capital and resources : developments, management and strategies book"
+            class="flex-shrink-0 w-56 bg-white rounded-sm shadow-sm"
+            role="group"
+          >
+            <img
+              alt="Book cover of Human capital and resources : developments, management and strategies, blue and white cover with globe and gears"
+              class="w-full rounded-t-sm"
+              height="336"
+              src="https://storage.googleapis.com/a1aa/image/d6738bb1-4e57-4e0a-641f-e2438ddcec9c.jpg"
+              width="224"
+            />
+            <div class="p-4 text-sm text-[#004a7c] leading-tight">
+              <p class="mb-2">Human capital and resources : developments, management and strategies</p>
+              <p class="text-black font-semibold">Author: Michael F. Rizzo &amp; Andrew C. King</p>
+            </div>
+          </article>
+          <article
+            aria-label="The New Jim Crow book"
+            class="flex-shrink-0 w-56 bg-white rounded-sm shadow-sm"
+            role="group"
+          >
+            <img
+              alt="Book cover of The New Jim Crow, black cover with hands behind bars"
+              class="w-full rounded-t-sm"
+              height="336"
+              src="https://storage.googleapis.com/a1aa/image/23008428-9e18-4b6b-d8f5-e6dbc7c7b52c.jpg"
+              width="224"
+            />
+            <div class="p-4 text-sm text-[#004a7c] leading-tight">
+              <p class="mb-2 text-[#004a7c] underline">The New Jim Crow</p>
+              <p class="text-black font-semibold">Author: Michelle Alexander</p>
+            </div>
+          </article>
+          <article
+            aria-label="Book with Bengali text and portrait cover"
+            class="flex-shrink-0 w-56 bg-white rounded-sm shadow-sm"
+            role="group"
+          >
+            <img
+              alt="Book cover with Bengali text and a portrait of an elderly man with glasses"
+              class="w-full rounded-t-sm"
+              height="336"
+              src="https://storage.googleapis.com/a1aa/image/5f4cbb39-bff0-46fc-b265-41abb69ed007.jpg"
+              width="224"
+            />
+            <div class="p-4 text-sm text-[#004a7c] leading-tight">
+              <p class="mb-2 text-[#004a7c] underline">বাঙলা লেখা বইয়ের শিরোনাম (Bengali text)</p>
+              <p class="text-black font-semibold">Author: শামসুজ্জোহা চৌধুরী</p>
+            </div>
+          </article>
+          <article
+            aria-label="Quality assurance in higher education : a study of developing countries book"
+            class="flex-shrink-0 w-56 bg-white rounded-sm shadow-sm"
+            role="group"
+          >
+            <img
+              alt="Book cover of Quality assurance in higher education : a study of developing countries, blue cover with wave pattern"
+              class="w-full rounded-t-sm"
+              height="336"
+              src="https://storage.googleapis.com/a1aa/image/8314e2c8-c677-4025-26fe-64b48c96fcc1.jpg"
+              width="224"
+            />
+            <div class="p-4 text-sm text-[#004a7c] leading-tight">
+              <p class="mb-2">Quality assurance in higher education : a study of developing countries</p>
+              <p class="text-black font-semibold">Author: David Lim</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+<!-- last part -->
+<body class="bg-[#d9d8d7] min-h-screen flex flex-col">
+  <div class="w-full max-w-full px-12 py-16 mx-auto flex flex-col">
+    <div class="flex items-center space-x-4 mb-14 max-w-full">
+      <div class="partnership-bar">
+        PARTNERSHIPS AND AFFILIATES
+      </div>
+      <div class="flex-grow border-t border-[#0f2f5a]"></div>
+    </div>
+    <div
+      class="grid grid-cols-3 sm:grid-cols-6 gap-12 max-w-7xl mx-auto w-full"
+    >
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="ACBSP logo with orange triangle and text"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/d58300c0-4824-4496-f470-c9e9dc0d69b3.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="Chartered Accountants logo in red and white"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/18701104-49d5-4acc-6050-ade8542e32d1.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="ICMAB logo with blue icon and text"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/1005cae9-b0b8-4183-b3f3-ef7161017f83.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="ACCA logo white text on red background"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/6439e49b-6bd6-464f-8c17-6087993ab221.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="BIOM logo with blue globe and text Excellence Education Excellence"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/7ab66cf9-0176-4165-bdfb-e1578c7172bf.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="ICSB logo white text on dark blue background"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/1f1eafbe-7045-457a-6e80-ab6cc086646d.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="Banglalink logo orange and black stripes with text"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/4a0a3fdf-0a36-45e1-7965-8aa471707099.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="Macquarie University logo red and black with text Sydney Australia"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/369703b3-bac9-4413-57e9-65e7b3523572.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="USAID logo circular with stars and stripes"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/8a4e4be3-0280-4e1b-481a-98fe31bd8272.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="Asian Institute of Technology logo green globe and text 1959"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/942d938c-da84-4ffb-0204-90f6a2fda149.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+      <div
+        class="bg-white p-8 flex justify-center items-center border border-gray-300 shadow-lg rounded transition-transform duration-300"
+      >
+        <img
+          alt="CFA Institute logo blue and green icon with text University Affiliation Program"
+          class="max-h-32 object-contain img-3d-shadow"
+          height="128"
+          src="https://storage.googleapis.com/a1aa/image/f173c103-70d5-4b61-3ae2-2d15c47eb4da.jpg"
+          width="200"
+          tabindex="0"
+        />
+      </div>
+    </div>
+  </div>
+
+      
+<!-- last part -->
+<footer class="text-white font-sans text-lg leading-relaxed w-full">
+  <div class="bg-[#0b5a87] py-3 px-6 flex flex-col sm:flex-row justify-between items-center w-full">
+   <p class="mb-2 sm:mb-0">
+    To continue our founding mission to bring knowledge to Bangladesh
+   </p>
+   <div class="flex items-center space-x-4 font-semibold">
+    <span>
+     Follow Us
+    </span>
+    <a aria-label="Facebook" class="w-7 h-7 flex justify-center items-center bg-[#2d4a6e] rounded text-white hover:bg-[#3b5998]" href="#">
+     <i class="fab fa-facebook-f text-base">
+     </i>
+    </a>
+    <a aria-label="YouTube" class="w-7 h-7 flex justify-center items-center bg-[#2d4a6e] rounded text-white hover:bg-[#c4302b]" href="#">
+     <i class="fab fa-youtube text-base">
+     </i>
+    </a>
+    <a aria-label="Twitter" class="w-7 h-7 flex justify-center items-center bg-[#2d4a6e] rounded text-white hover:bg-[#1da1f2]" href="#">
+     <i class="fab fa-twitter text-base">
+     </i>
+    </a>
+    <a aria-label="Instagram" class="w-7 h-7 flex justify-center items-center bg-[#2d4a6e] rounded text-white hover:bg-[#e4405f]" href="#">
+     <i class="fab fa-instagram text-base">
+     </i>
+    </a>
+   </div>
+  </div>
+  <div class="bg-[#143a6e] px-6 py-10 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+   <div class="space-y-4">
+    <img alt="East West University logo in gray scale with text East West University" class="w-[150px] h-[50px] object-contain" height="50" src="LG1.png" width="300"/>
+    <address class="not-italic text-gray-200 space-y-2 text-base">
+     <p>
+      📍 A/2, Jahurul Islam Avenue
+      <br/>
+      Jahurul Islam City, Aftabnagar
+      <br/>
+      Dhaka-1212, Bangladesh
+     </p>
+     <p>
+      📞 09666775577, Ext. - 234
+      <br/>
+      📞 +8801755587224, +8801851933094 (Hotline)
+     </p>
+     <p>
+      ✉ admissions@ewubd.edu
+      <br/>
+      ✉ info@ewubd.edu
+     </p>
+    </address>
+   </div>
+   <div>
+    <h3 class="font-bold mb-4 text-xl">
+     Student
+    </h3>
+    <ul class="space-y-2 text-gray-200 text-base">
+     <li>
+      Academic Calendar
+     </li>
+     <li>
+      Campus Life
+     </li>
+     <li>
+      Payment Procedure
+     </li>
+     <li>
+      Convocation
+     </li>
+     <li>
+      Rules &amp; Regulation
+     </li>
+     <li>
+      Faculty Search
+     </li>
+     <li>
+      Grading Policy
+     </li>
+    </ul>
+   </div>
+   <div>
+    <h3 class="font-bold mb-4 text-xl">
+     University
+    </h3>
+    <ul class="space-y-2 text-gray-200 text-base">
+     <li>
+      Directory
+     </li>
+     <li>
+      Proctor Schedule
+     </li>
+     <li>
+      E-Tender
+     </li>
+     <li>
+      Procurement
+     </li>
+     <li>
+      Gallery
+     </li>
+     <li>
+      Journal and Publications
+     </li>
+     <li>
+      Archives
+     </li>
+    </ul>
+   </div>
+   <div>
+    <h3 class="font-bold mb-4 text-xl">
+     Quick Links
+    </h3>
+    <div class="flex flex-col space-y-3 max-w-[180px]">
+     <button class="bg-[#6f8a9e] text-white text-base py-2 rounded">
+      Apply Online
+     </button>
+     <button class="bg-[#6f8a9e] text-white text-base py-2 rounded">
+      Jobs at EWU
+     </button>
+     <button class="bg-[#6f8a9e] text-white text-base py-2 rounded">
+      Degree Verification
+     </button>
+     <button class="bg-[#6f8a9e] text-white text-base py-2 rounded">
+      Contact Us
+     </button>
+    </div>
+   </div>
+   <div>
+    <h3 class="font-bold mb-4 text-xl">
+     Location Map
+    </h3>
+    <img alt="Map location of East West University in Dhaka Bangladesh showing nearby roads and landmarks" class="w-[200px] h-[130px] object-cover rounded" height="130" src="https://storage.googleapis.com/a1aa/image/11729550-c98b-4654-c102-923fbc5bef43.jpg" width="200"/>
+   </div>
+  </div>
+  <div class="bg-[#0b3a5a] text-gray-300 px-6 py-3 flex flex-col sm:flex-row justify-between w-full text-base">
+   <p>
+    Developed and maintained by ICS, EWU
+   </p>
+   <p class="text-center sm:text-left">
+    Copyright@ 2022 East West University
+   </p>
+   <p class="text-right">
+    174,905,711 Total view, 14,446,489 Views Today
+   </p>
+  </div>
+ </footer>
+  
+
+<!-- Home pages css  -->
+
+<style> 
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f7f5f5;
+    min-height: 200vh;
+    margin: 0; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 100000;
+    transition: all 0.4s ease;
+}
+
+header.sticky {
+    padding: 5px 100px;
+    background: #fff;
+}
+
+header .Logo img {
+    height: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+header ul {
+    display: flex;
+    align-items:center;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000000;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.2s;
+    font-size: 1.2rem;
+}
+
+header.sticky ul li a {
+    color: #000;
+}
+
+header.sticky .Logo img {
+    filter: none;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+header ul li a:hover {
+    color: #ff4b2b; 
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background:#FAF9F6;
+    padding: 10px 0;
+    display: none;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10000;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu li a {
+    color: #000;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    font-weight: 300;
+    transition: 0.3s;
+    font-size: 0.85rem;
+}
+
+.dropdown-menu li a:hover {
+    background: #f1f1f1;
+    color: #d11717;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+ .search-container {
+      background: linear-gradient(135deg, rgba(0,44,77,0.9) 0%, rgba(0,88,122,0.9) 100%);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .search-input:focus {
+      box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.3);
+    }
+
+      .scrollbar-thin::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      .scrollbar-thin::-webkit-scrollbar-thumb {
+        background-color: #a1a1aa;
+        border-radius: 3px;
+      }
+
+
+      .page {
+        display: none;
+      }
+      .page.active {
+        display: block;
+      }
+
+
+    
+    .carousel::-webkit-scrollbar {
+        display: none;
+      }
+      .carousel {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+    
+  main {
+    max-width: 6xl;
+    margin: auto;
+    padding: 2rem 5rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  section {
+    flex: 1;
+    margin-bottom: 2.5rem;
+    padding: 1.4rem;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s;
+  }
+
+  section:hover {
+    transform: translateY(-5px);
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  nav {
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    color: #0f7bbf;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    user-select: none;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #0f7bbf;
+    padding: 0.5rem 1rem;
+    border: 1px solid #0f7bbf;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  nav a:hover {
+    background-color: #0f7bbf;
+    color: white;
+  }
+
+
+   @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+   body {
+     font-family: "Open Sans", sans-serif;
+   }
+   
+   .img-3d-shadow {
+     box-shadow:
+       0 8px 15px rgba(0, 0, 0, 0.2),
+       0 15px 20px rgba(0, 0, 0, 0.15),
+       0 20px 40px rgba(0, 0, 0, 0.1);
+     transform: perspective(600px) rotateX(6deg) rotateY(-6deg);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     will-change: transform;
+   }
+   .img-3d-shadow:hover,
+   .img-3d-shadow:focus-visible {
+     transform: perspective(600px) rotateX(0deg) rotateY(0deg) translateY(-12px) scale(1.05);
+     box-shadow:
+       0 20px 30px rgba(0, 0, 0, 0.3),
+       0 30px 40px rgba(0, 0, 0, 0.25),
+       0 40px 60px rgba(0, 0, 0, 0.2);
+     z-index: 10;
+   }
+   
+   .partnership-bar {
+     background: linear-gradient(90deg, #0f2f5a 0%, #1a4a8f 100%);
+     color: #f0f4f8;
+     font-weight: 700;
+     font-size: 1.375rem; 
+     padding: 1rem 3rem;
+     position: relative;
+     display: inline-block;
+     white-space: nowrap;
+     border-radius: 0 12px 12px 0;
+     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+   }
+   .partnership-bar::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     right: -24px;
+     width: 0;
+     height: 0;
+     border-top: 36px solid #0f2f5a;
+     border-left: 24px solid transparent;
+     border-radius: 0 12px 12px 0;
+     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+   }
+
+     footer {
+        background-color:#003366 ;
+        color: white;
+       
+       
+    
+     }
+     
+     </style>
+
+
+
+
+<!-- Home pages java script  -->
+
+    <script>
+        
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Tab switching functionality
+  const tabs = document.querySelectorAll('.tab-btn');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      // Remove active class from all tabs
+      tabs.forEach(t => {
+        t.classList.remove('bg-blue-100');
+        t.classList.add('hover:bg-blue-100');
+      });
+      
+      // Add active class to clicked tab
+      this.classList.add('bg-blue-100');
+      this.classList.remove('hover:bg-blue-100');
+      
+      // You could also change the form action based on the tab here
+      const target = this.getAttribute('data-target');
+      document.getElementById('search-form').action = target;
+    });
+  });
+
+  // Form submission handling
+  const searchForm = document.getElementById('search-form');
+  searchForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const searchInput = document.getElementById('search-input').value.trim();
+    if (searchInput === '') {
+      alert('Please enter a search term');
+      return;
+    }
+    
+    // You can add additional validation or processing here
+    
+    // Submit the form
+    this.submit();
+  });
+});
+
+  
+
+
+
+    let selectedTabUrl = "library.html"; 
+
+document.querySelectorAll('.tab-btn').forEach(button => {
+  button.addEventListener('click', function () {
+    
+    selectedTabUrl = this.getAttribute('data-target');
+
+  
+    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('bg-blue-600/90'));
+    this.classList.add('bg-blue-600/90');
+  });
+});
+
+
+document.getElementById('search-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const query = document.getElementById('search-input').value.trim();
+
+  if (query) {
+    window.location.href = `${selectedTabUrl}?q=${encodeURIComponent(query)}`;
+  } else {
+    window.location.href = selectedTabUrl;
+  }
+});
+
+function showTab(tab) {
+  const tabs = ['library', 'google', 'eric'];
+  tabs.forEach((t) => {
+    document.getElementById(t + '-tab').classList.add('hidden');
+    document.getElementById(t + '-button').classList.remove('text-white', 'font-semibold', 'border-r', 'border-white/80', 'bg-[#0c1f4d]/90');
+    document.getElementById(t + '-button').classList.add('text-[#5bc0f8]');
+  });
+  document.getElementById(tab + '-tab').classList.remove('hidden');
+  document.getElementById(tab + '-button').classList.add('text-white', 'font-semibold', 'border-r', 'border-white/80', 'bg-[#0c1f4d]/90');
+  document.getElementById(tab + '-button').classList.remove('text-[#5bc0f8]');
+}
+
+function handleSearch(event, tab) {
+  event.preventDefault();
+  const input = event.target.querySelector('input[type="text"]');
+  const query = input.value.trim();
+  if (!query) {
+    alert('Please enter a search term.');
+    return;
+  }
+
+  const container = document.getElementById('container');
+  container.innerHTML = `
+    <div class="max-w-4xl w-full bg-[#0c1f4d]/90 border border-white/80 p-6 text-white font-sans">
+      <button onclick="goBack()" class="mb-4 px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold rounded">← Back to Search</button>
+      <h2 class="text-2xl font-semibold mb-4">${tab === 'library' ? 'Library Book Search' : tab === 'google' ? 'Google Scholar' : 'ERIC Database'} Results for:</h2>
+      <p class="mb-6 text-lg italic">"${query}"</p>
+      <ul class="list-disc list-inside space-y-2 max-h-[400px] overflow-y-auto">
+        ${Array(15).fill(0).map((_, i) => `<li>Result ${i + 1} for "${query}" in ${tab === 'library' ? 'Library Catalogue' : tab === 'google' ? 'Google Scholar' : 'ERIC Database'}</li>`).join('')}
+      </ul>
+    </div>
+  `;
+}
+
+function goBack() {
+  location.reload();
+}
+
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  const logo = document.getElementById('logo');
+
+  if (window.scrollY > 0) {
+    header.classList.add('sticky');
+    logo.src = "logo-black.png";
+  } else {
+    header.classList.remove('sticky');
+    logo.src = "logo1.png";
+  }
+});
+
+function animateValue(id, start, end, duration) {
+const obj = document.getElementById(id);
+let startTimestamp = null;
+const step = (timestamp) => {
+  if (!startTimestamp) startTimestamp = timestamp;
+  const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+  obj.textContent = Math.floor(progress * (end - start) + start).toLocaleString();
+  if (progress < 1) {
+    window.requestAnimationFrame(step);
+  }
+};
+window.requestAnimationFrame(step);
+}
+
+animateValue("printed-books-count", 0, 51000, 2000);
+animateValue("theses-count", 0, 2400, 2000);
+animateValue("ebooks-count", 0, 102931, 2000);
+animateValue("journals-count", 0, 98000, 2000);
+
+ 
+let currentDate = new Date(2025, 3, 19); 
+let currentView = 'month';
+
+const calendarContainer = document.getElementById('calendarContainer');
+const calendarMonthYear = document.getElementById('calendarMonthYear');
+const monthViewBtn = document.getElementById('monthViewBtn');
+
+function changeMonth(amount) {
+  currentDate.setMonth(currentDate.getMonth() + amount);
+  renderCalendar();
+}
+
+function changeView(view) {
+  currentView = view;
+  document.querySelectorAll('[onclick^="changeView"]').forEach(btn => {
+    btn.classList.remove('bg-purple-700', 'text-white', 'px-6', 'py-3', 'rounded');
+    btn.classList.add('focus:outline-none');
+  });
+  if (view === 'month') {
+    monthViewBtn.classList.add('bg-purple-700', 'text-white', 'px-6', 'py-3', 'rounded');
+  } else {
+    const btn = Array.from(document.querySelectorAll('[onclick^="changeView"]')).find(b => b.textContent.trim().toLowerCase() === view);
+    if (btn) {
+      btn.classList.add('bg-purple-700', 'text-white', 'px-6', 'py-3', 'rounded');
+    }
+  }
+  renderCalendar();
+}
+
+function renderCalendar() {
+  calendarMonthYear.textContent = currentDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+
+  if (currentView === 'month') {
+    renderMonthView();
+  } else if (currentView === 'week') {
+    renderWeekView();
+  } else if (currentView === 'day') {
+    renderDayView();
+  } else if (currentView === 'list') {
+    renderListView();
+  }
+}
+
+function renderMonthView() {
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  const startDay = firstDay.getDay();
+  const daysInMonth = lastDay.getDate();
+
+  const prevLastDay = new Date(year, month, 0).getDate();
+
+  let html = `<table class="w-full text-sm text-center border-collapse border border-gray-100">
+      <thead class="bg-gray-100 text-gray-700 font-semibold">
+        <tr>
+          <th class="border border-gray-100 py-3">Sun</th>
+          <th class="border border-gray-100 py-3">Mon</th>
+          <th class="border border-gray-100 py-3">Tue</th>
+          <th class="border border-gray-100 py-3">Wed</th>
+          <th class="border border-gray-100 py-3">Thu</th>
+          <th class="border border-gray-100 py-3">Fri</th>
+          <th class="border border-gray-100 py-3">Sat</th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-900">`;
+
+  let dayCount = 1;
+  let nextMonthDay = 1;
+  for (let row = 0; row < 6; row++) {
+    html += '<tr>';
+    for (let col = 0; col < 7; col++) {
+      let dayNumber = '';
+      let classes = 'border border-gray-100 py-6';
+      let textColor = 'text-gray-900';
+      let bgColor = '';
+      if (row === 0 && col < startDay) {
+        dayNumber = prevLastDay - (startDay - col - 1);
+        textColor = 'text-gray-300';
+      } else if (dayCount > daysInMonth) {
+        dayNumber = nextMonthDay++;
+        textColor = 'text-gray-300';
+      } else {
+        dayNumber = dayCount++;
+        if (
+          dayNumber === 19 &&
+          month === 3 &&
+          year === 2025
+        ) {
+          bgColor = 'bg-yellow-50 font-semibold text-blue-700';
+        }
+      }
+      html += `<td class="${classes} ${textColor} ${bgColor}">${dayNumber}</td>`;
+    }
+    html += '</tr>';
+    if (dayCount > daysInMonth && nextMonthDay > 7) break;
+  }
+  html += '</tbody></table>';
+  calendarContainer.innerHTML = html;
+}
+
+function renderWeekView() {
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  const date = currentDate.getDate();
+
+  const dayOfWeek = currentDate.getDay();
+  const sunday = new Date(year, month, date - dayOfWeek);
+
+  let html = `<table class="w-full text-sm text-center border-collapse border border-gray-100">
+      <thead class="bg-gray-100 text-gray-700 font-semibold">
+        <tr>`;
+
+  const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  for (let i = 0; i < 7; i++) {
+    html += `<th class="border border-gray-100 py-6">${dayNames[i]}</th>`;
+  }
+  html += '</tr></thead><tbody><tr>';
+
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(sunday);
+    d.setDate(sunday.getDate() + i);
+    const isToday =
+      d.getDate() === 19 &&
+      d.getMonth() === month &&
+      d.getFullYear() === year;
+    const textColor = d.getMonth() === month ? 'text-gray-900' : 'text-gray-300';
+    const bgColor = isToday ? 'bg-yellow-50 font-semibold text-blue-700' : '';
+    html += `<td class="border border-gray-100 py-6 ${textColor} ${bgColor}">${d.getDate()}</td>`;
+  }
+  html += '</tr></tbody></table>';
+  calendarContainer.innerHTML = html;
+}
+
+function renderDayView() {
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  const date = currentDate.getDate();
+
+  const dayName = currentDate.toLocaleString('default', { weekday: 'long' });
+  const textColor = 'text-gray-900';
+  const bgColor = 'bg-yellow-50 font-semibold text-blue-700';
+
+  let html = `<div class="text-center text-sm text-gray-600 font-semibold mb-4">${dayName}, ${date} ${currentDate.toLocaleString('default', { month: 'long' })} ${year}</div>`;
+  html += `<div class="border border-gray-100 rounded py-16 text-2xl ${textColor} ${bgColor}">Day View: ${date}</div>`;
+
+  calendarContainer.innerHTML = html;
+}
+
+function renderListView() {
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+
+  const lastDay = new Date(year, month + 1, 0).getDate();
+
+  let html = '<ul class="list-disc list-inside text-sm text-gray-900 max-h-[24rem] overflow-auto">';
+  for (let d = 1; d <= lastDay; d++) {
+    const isToday = d === 19 && month === 3 && year === 2025;
+    html += `<li class="${isToday ? 'font-semibold text-blue-700' : ''} py-2">${d} ${currentDate.toLocaleString('default', { month: 'long' })} ${year}</li>`;
+  }
+  html += '</ul>';
+
+  calendarContainer.innerHTML = html;
+}
+
+renderCalendar();
+
+
+ 
+
+ 
+ const workshopsData = [
+  {
+    title: "Library session for MA-TESOL",
+    date: "Thursday , Feb 6th , 2025",
+    url: "#",
+  },
+  {
+    title: "Library orientation and literature search session for JPGSPH MPH 2025 cohort",
+    date: "Tuesday , Jan 21st , 2025",
+    url: "#",
+  },
+  {
+    title: "Library Online Session for M.Ed. 11th batch",
+    date: "Thursday , Dec 19th , 2024",
+    url: "#",
+  },
+  {
+    title: "Library Session for ENG '102",
+    date: "Wednesday , Dec 18th , 2024",
+    url: "#",
+  },
+  {
+    title: "Library Online Session for ECD 23rd batch",
+    date: "Tuesday , Dec 3rd , 2024",
+    url: "#",
+  },
+  {
+    title: "Workshop on Research Methodology",
+    date: "Monday , Nov 25th , 2024",
+    url: "#",
+  },
+  {
+    title: "Seminar on Public Health",
+    date: "Friday , Nov 15th , 2024",
+    url: "#",
+  },
+  {
+    title: "Orientation for New Students",
+    date: "Wednesday , Nov 6th , 2024",
+    url: "#",
+  },
+  {
+    title: "Library Training Session",
+    date: "Tuesday , Oct 29th , 2024",
+    url: "#",
+  },
+  {
+    title: "End of Year Workshop",
+    date: "Friday , Oct 18th , 2024",
+    url: "#",
+  },
+];
+
+
+const newsData = [
+  {
+    title: "Library Circulation Service Notice: January 9, 2025",
+    date: "Wednesday , Jan 8th , 2025",
+    url: "#",
+  },
+  {
+    title: "Library Closure Notice: January 1, 2025",
+    date: "Tuesday , Dec 31st , 2024",
+    url: "#",
+  },
+  {
+    title: "Library Closure Notice: December 25-26, 2024",
+    date: "Tuesday , Dec 24th , 2024",
+    url: "#",
+  },
+  {
+    title: "Library Policy on Unattended Belongings",
+    date: "Tuesday , Nov 19th , 2024",
+    url: "#",
+  },
+  {
+    title: "Open Access Week 2024",
+    date: "Monday , Oct 21st , 2024",
+    url: "#",
+  },
+  {
+    title: "New Library Hours Announcement",
+    date: "Friday , Oct 11th , 2024",
+    url: "#",
+  },
+  {
+    title: "Digital Resources Update",
+    date: "Thursday , Oct 3rd , 2024",
+    url: "#",
+  },
+  {
+    title: "Holiday Schedule Notice",
+    date: "Monday , Sep 23rd , 2024",
+    url: "#",
+  },
+  {
+    title: "Library Staff Training Completed",
+    date: "Wednesday , Sep 11th , 2024",
+    url: "#",
+  },
+  {
+    title: "New Book Arrivals for Fall 2024",
+    date: "Tuesday , Sep 3rd , 2024",
+    url: "#",
+  },
+];
+
+const itemsPerPage = 5;
+let currentWorkshopPage = 1;
+let currentNewsPage = 1;
+
+const workshopsList = document.getElementById("workshops-list");
+const workshopsPagination = document.getElementById("workshops-pagination");
+const newsList = document.getElementById("news-list");
+const newsPagination = document.getElementById("news-pagination");
+
+function renderList(data, container, page) {
+  container.innerHTML = "";
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = data.slice(start, end);
+
+  pageItems.forEach((item) => {
+    const li = document.createElement("li");
+    li.className = "mb-4 border-b border-[#d9d9d9] pb-3";
+
+    const a = document.createElement("a");
+    a.href = item.url;
+    a.className = "text-[#0f7bbf] hover:underline";
+    a.textContent = item.title;
+
+    const p = document.createElement("p");
+    p.className = "text-[11px] mt-1 text-[#0f3a5d]";
+    p.textContent = item.date;
+
+    li.appendChild(a);
+    li.appendChild(p);
+    container.appendChild(li);
+  });
+}
+
+function renderPagination(data, container, currentPage, onPageChange) {
+  container.innerHTML = "";
+
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+
+  function createPageButton(label, page, isActive = false, isDisabled = false) {
+    const btn = document.createElement("a");
+    btn.href = "#";
+    btn.textContent = label;
+    btn.className = `px-2 py-0.5 border rounded-sm ${
+      isActive
+        ? "border-[#0f7bbf] bg-[#0f7bbf] text-white"
+        : "border-[#d9d9d9] text-[#0f7bbf] hover:underline"
+    }`;
+    if (isDisabled) {
+      btn.className =
+        "px-2 py-0.5 border border-[#d9d9d9] rounded-sm text-gray-400 cursor-not-allowed select-none";
+      btn.removeAttribute("href");
+    } else {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (page !== currentPage) {
+          onPageChange(page);
+        }
+      });
+    }
+    return btn;
+  }
+
+  container.appendChild(
+    createPageButton("« First", 1, false, currentPage === 1)
+  );
+  container.appendChild(
+    createPageButton("‹ Previous", currentPage - 1, false, currentPage === 1)
+  );
+
+  let startPage = 1;
+  let endPage = totalPages;
+  if (totalPages > 9) {
+    if (currentPage <= 5) {
+      startPage = 1;
+      endPage = 9;
+    } else if (currentPage + 4 >= totalPages) {
+      startPage = totalPages - 8;
+      endPage = totalPages;
+    } else {
+      startPage = currentPage - 4;
+      endPage = currentPage + 4;
+    }
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    container.appendChild(createPageButton(i, i, i === currentPage));
+  }
+
+  container.appendChild(
+    createPageButton("› Next", currentPage + 1, false, currentPage === totalPages)
+  );
+  container.appendChild(
+    createPageButton("Last »", totalPages, false, currentPage === totalPages)
+  );
+}
+
+function renderAll() {
+  renderList(workshopsData, workshopsList, currentWorkshopPage);
+  renderPagination(workshopsData, workshopsPagination, currentWorkshopPage, (page) => {
+    currentWorkshopPage = page;
+    renderList(workshopsData, workshopsList, currentWorkshopPage);
+    renderPagination(workshopsData, workshopsPagination, currentWorkshopPage, onWorkshopPageChange);
+  });
+
+  renderList(newsData, newsList, currentNewsPage);
+  renderPagination(newsData, newsPagination, currentNewsPage, (page) => {
+    currentNewsPage = page;
+    renderList(newsData, newsList, currentNewsPage);
+    renderPagination(newsData, newsPagination, currentNewsPage, onNewsPageChange);
+  });
+}
+
+function onWorkshopPageChange(page) {
+  currentWorkshopPage = page;
+  renderList(workshopsData, workshopsList, currentWorkshopPage);
+  renderPagination(workshopsData, workshopsPagination, currentWorkshopPage, onWorkshopPageChange);
+}
+
+function onNewsPageChange(page) {
+  currentNewsPage = page;
+  renderList(newsData, newsList, currentNewsPage);
+  renderPagination(newsData, newsPagination, currentNewsPage, onNewsPageChange);
+}
+
+renderAll();
+    </script>
+
+
+ <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
