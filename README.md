@@ -1,2 +1,2 @@
-# node.js + mongbd project 
+# node.js + mongobd project 
 # npm start
